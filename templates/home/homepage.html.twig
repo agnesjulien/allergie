@@ -12,11 +12,11 @@
     <p>Je suis ravie de vous faire partager ce scientifique qui a prit des risques pour toi qui a la peau épaisse, ou elle qui a la peau blanche, ou eux qui pensent être insensibles .... bref pour nous tous !</p>
     <h3>J'espère que cet article attisera ta curiosité ...</h3>
     
-    <table class="table">
+    <table class="table ">
 		<thead>
 			<tr>
 				<th>Insecte</th>	
-                <th>Photos</th>
+                <th>Photo</th>
                 <th>Pays</th>
 				<th>Réactions</th>				
                 <th>Note douleur</th>
@@ -26,11 +26,10 @@
         <tr>
 					<th>{{ currrentInsect.name }}</th>
                     <th>
-                   <div class="col-4 movie__picture" style="background-image: url({{ currrentInsect.picture}});">
-                        <img src="{{ asset('images/sweat-bee-fleur.png') }}" class="img-fluid">
+                    <div class="col-12 picture" style="background-picture: url({{ currrentInsect.picture }});">
+                        <img src="{{ currrentInsect.picture }}" class="img-fluid">
                     </div>
                     </th>
-					{# <th>{{ currrentInsect.picture }}</th> #}
 					<th>{{ currrentInsect.country }}</th>
                     <th>{{ currrentInsect.reaction }}</th>
                     <th>{{ currrentInsect.ratting }}</th>
