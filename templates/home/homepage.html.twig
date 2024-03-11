@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>L'échelle de Schmidt</h1>
+
+    <p>Je suis ravie de vous faire partager ce scientifique qui a prit des risques pour toi qui a la peau épaisse, ou elle qui a la peau blanche, ou eux qui pensent être insensibles .... bref pour nous tous !</p>
+    <h3>J'espère que cet article attisera ta curiosité ...</h3>
+    
+    <table class="table">
+		<thead>
+			<tr>
+				<th>Insecte</th>				
+                <th img src="../public/images/sweat-bee-fleur.png"> Photos</th>
+                <th>Pays</th>
+				<th>Réactions</th>				
+                <th>Note douleur</th>
+
+			</tr>
+        {% for currrentInsect in insect %}
+        <tr>
+					<th>{{ currrentInsect.name }}</th>
+					<th>{{ currrentInsect.picture }}</th>
+					<th>{{ currrentInsect.country }}</th>
+                    <th>{{ currrentInsect.reaction }}</th>
+                    <th>{{ currrentInsect.ratting }}</th>
+		</tr>		
+        </thead>
+
+        {% endfor %}
+
+    </table>
+</div> 
+{% endblock %}
