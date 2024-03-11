@@ -15,8 +15,8 @@
     <table class="table">
 		<thead>
 			<tr>
-				<th>Insecte</th>				
-                <th img src="../public/images/sweat-bee-fleur.png"> Photos</th>
+				<th>Insecte</th>	
+                <th>Photos</th>
                 <th>Pays</th>
 				<th>Réactions</th>				
                 <th>Note douleur</th>
@@ -25,7 +25,12 @@
         {% for currrentInsect in insect %}
         <tr>
 					<th>{{ currrentInsect.name }}</th>
-					<th>{{ currrentInsect.picture }}</th>
+                    <th>
+                   <div class="col-4 movie__picture" style="background-image: url({{ currrentInsect.picture}});">
+                        <img src="{{ asset('images/sweat-bee-fleur.png') }}" class="img-fluid">
+                    </div>
+                    </th>
+					{# <th>{{ currrentInsect.picture }}</th> #}
 					<th>{{ currrentInsect.country }}</th>
                     <th>{{ currrentInsect.reaction }}</th>
                     <th>{{ currrentInsect.ratting }}</th>
