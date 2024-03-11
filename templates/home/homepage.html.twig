@@ -7,10 +7,10 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>L'échelle de Schmidt</h1>
+    <h1><strong>L'échelle de Schmidt</strong></h1>
 
     <p>Je suis ravie de vous faire partager ce scientifique qui a prit des risques pour toi qui a la peau épaisse, ou elle qui a la peau blanche, ou eux qui pensent être insensibles .... bref pour nous tous !</p>
-    <h3>J'espère que cet article attisera ta curiosité ...</h3>
+    <h2>J'espère que cet article attisera ta curiosité ...</h2>
     
     <table class="table ">
 		<thead>
@@ -20,24 +20,21 @@
                 <th>Pays</th>
 				<th>Réactions</th>				
                 <th>Note douleur</th>
-
 			</tr>
         {% for currrentInsect in insect %}
-        <tr>
-					<th>{{ currrentInsect.name }}</th>
-                    <th>
-                    <div class="col-12 picture" style="background-picture: url({{ currrentInsect.picture }});">
+            <tr>
+				<th>{{ currrentInsect.name }}</th>
+                <th>
+                     <div class="col-12 picture" style="background-picture: url({{ currrentInsect.picture }});">
                         <img src="{{ currrentInsect.picture }}" class="img-fluid">
                     </div>
                     </th>
-					<th>{{ currrentInsect.country }}</th>
-                    <th>{{ currrentInsect.reaction }}</th>
-                    <th>{{ currrentInsect.ratting }}</th>
-		</tr>		
-        </thead>
-
+				<th>{{ currrentInsect.country }}</th>
+                <th>{{ currrentInsect.reaction }}</th>
+                <th>{{ currrentInsect.ratting }}</th>
+		    </tr>		
         {% endfor %}
-
+        </thead>
     </table>
 </div> 
 {% endblock %}

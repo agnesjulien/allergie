@@ -1,0 +1,12 @@
+body {
+    background: content-box radial-gradient(crimson, skyblue);    
+}
+main {
+    background-color: rgb(179, 206, 148);
+    width: 1400px;
+    margin: 0.5em auto;
+    padding: 1em;
+}
+.table {
+    text-align: center;
+}
